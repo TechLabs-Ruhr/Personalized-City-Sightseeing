@@ -9,4 +9,5 @@ function openModal() {
   document.getElementById("create-account").addEventListener("click", openModal);
   
   document.getElementById("close-modal").addEventListener("click", closeModal);
-  
+
+ 

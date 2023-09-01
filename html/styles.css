@@ -141,3 +141,23 @@ font-size: 55%;
   .close-btn:hover {
     color: #f44336;
   }
+
+/* Map styles */ 
+
+  #map { 
+    display: flex;
+    flex-direction: column;
+    height: 400px; 
+    align-items: center;
+  }
+
+/* Searchbar styles */
+
+.form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+  width: 50%;
+  height: 50%;
+  align-items: center;  
+}
