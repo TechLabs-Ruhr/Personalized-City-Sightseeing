@@ -1,0 +1,199 @@
+@media  screen and (max-width: 768px)
+{
+    header > h1
+    {
+        font-size: 20px;
+    }
+}
+
+@media  screen and (max-width: 480px)
+{
+    header > h1
+    {
+        display: none;
+    }
+
+    nav
+    {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+*
+{
+    font-family: Helvetica, Arial, monospace;
+}
+
+figcaption
+{
+    visibility: hidden;
+}
+
+h1
+{
+    color: black;
+    font-size: xx-large;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+h2
+{
+    color: black;
+    font-size: large;
+    font-weight: bolder;
+    text-transform: capitalize;
+}
+
+h3
+{
+    color: black;
+    font-size: x-large;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+p
+{
+    color: black;
+    background-color: #b7ce63;
+    font-size: large;
+    font-weight: bolder;
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 2em;
+    margin: 5px;
+}
+
+p > strong
+{
+    font-size: x-large;
+    text-decoration: solid;
+}
+
+body
+{
+    padding: 0;
+    margin: 0;
+}
+
+header
+{
+    background-color: #daddd8;
+    text-align: center;
+    border: 2px solid black;
+    border-radius: 10px; 
+    margin: 5px;
+    height: 216px;
+}
+
+nav
+{
+    background-color: #c7d59f;
+    font-size: large;
+    text-align: center;
+    border: 2px solid black;
+    border-radius: 10px; 
+    box-shadow: 0 0 10px black;
+    padding: 20px;
+    margin: 5px;
+}
+
+nav a
+{
+    color: black;
+    text-decoration: underline;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+nav a:hover
+{
+    font-size: x-large;
+    text-decoration: underline;
+}
+
+main {
+    background-color: #6b6d76;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 5px;
+    margin: 5px;
+}
+
+main h3
+{
+    visibility: hidden;
+}
+
+main#tutorial figure
+{
+    float: right;
+    margin-right: 20px;
+}
+
+main#tutorials img
+{
+    float: left;
+    margin-right: 20px;
+}
+
+thead
+{
+    color: black;
+    background-color: #b7ce63;
+}
+
+tbody tr:nth-of-type(odd)
+{
+    color: black;
+    background-color: #DADDD8;
+}
+
+tbody tr:nth-of-type(even)
+{
+    color: black;
+    background-color: #c7d59f;
+}
+
+tfoot
+{
+    color: black;
+    background-color: #b7ce63;
+}
+
+aside > h2
+{
+    color: black;
+    font-size: large;
+    font-weight: bold;
+    text-align: center;
+    text-transform: capitalize;
+    text-decoration: underline;
+    padding: 10px;
+    margin: 5px;
+}
+
+aside
+{
+    color: black;
+    background-color: #b7ce63;
+    border: 2px solid black;
+    border-radius: 10px; 
+    font-size: large;
+    text-align: center;
+    padding: 10px;
+    margin: 5px;
+}
+
+footer
+{
+    background-color: #daddd8;
+    text-align: center;
+    border: 2px solid black;
+    border-radius: 10px;
+    bottom: 0;
+    padding: 1em;
+    width: 100%;
+}

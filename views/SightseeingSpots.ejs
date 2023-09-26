@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+        <title>Tutorials</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="css/styles.css">
+        <link rel="stylesheet" type="text/css" href="css/grid.css">
+        <script src="js/burgermenu.js"></script>
+    </head>
+    <body id="containerbody">
+        <%- include("includes/header.ejs") %>
+        <%- include("includes/nav.ejs") %>
+        <main id="containermain">
+            <section id="tutorial1">
+                <h2><%= Sightseeing || "All Places" %></h2>
+                <% if(Sightseeing.length) { %>
+                    <% for (let places of Sightseeing) { %>
+                            <figure>
+                                <img src=<%= places.Picture %> alt=<%= Sightseeing.Picture %> height="100">
+                            </figure>
+                            <h3>><%= Sightseeing.name %></a></h3>
+                            <p>date: <%= Sightseeing.date %></p>
+                            <p>duration: <%= (Sightseeing.duration) %></p>
+                            <p>description: <%= Sightseeing.description %></p>
+                    <% } %>
+                <% } else { %>
+                    <p class="notfound">No matching places</p>
+                <% } %>
+            </section>
+        </main>
+        <%- include("includes/aside.ejs") %>
+        <%- include("includes/footer.ejs") %>
+    </body>
+</html>

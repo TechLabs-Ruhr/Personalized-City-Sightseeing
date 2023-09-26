@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+        <title>Overview</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="css/styles.css">
+        <link rel="stylesheet" type="text/css" href="css/flexbox.css">
+        <link rel="stylesheet" type="text/css" href="css/tiles.css">
+        <script src="js/script.js"></script>
+        <script src="js/burgermenu.js"></script>
+    </head>
+    <body>
+        <%- include("includes/header.ejs") %>
+        <%- include("includes/nav.ejs") %>
+        <div id="containermainaside">
+            <main id="containermain">
+                <section id="search">
+                    <h2>Search:</h2>
+                    <form action="https://localhost:8844" method="get">
+                        <fieldset>
+                            <label for="title">Search:</label>
+                            <input id="title" name="search" type="text" size="20" minlength="4" maxlength="20" pattern="[A-Z].*" placeholder="name of place" required>
+                            <input id="submit" type="submit" value="Go!">
+                        </fieldset>
+                    </form>
+                </section>
+                <section id="list">
+                    <h2>Overview</h2>
+                    <ol id="tiles">
+                    <% if (PlacesArray) { %>
+                        <% for (let place of PlacesArray) { %>
+                            <li class="tile"><a href=<%= 'http://localhost:8020/SightseeingSpots=' + place.name.replaceAll(' ', '+') %>>
+                                <img class="tile-img" src=<%= place.picture %> alt=<%= place.Picture %>>
+                                <%= place.name %></a></li>
+                        <% } %>
+                    <% } else { %>
+                        <li class="tile">No Sightseeing found!</li>
+                    <% } %>
+                    </ol>
+                </section>
+            </main>
+            <%- include("includes/aside.ejs") %>
+        </div>
+        <%- include("includes/footer.ejs") %>
+    </body>
+</html>

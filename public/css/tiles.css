@@ -1,0 +1,44 @@
+#tiles
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.tile
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #B7CE63;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 0px black;
+    margin: 10px;
+    width: 200px;
+    height: 200px;
+}
+
+.tile:hover
+{
+    box-shadow: 0px 0px 20px 0px black;
+}
+
+.tile a
+{
+    color: black;
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    align-items: center;
+    padding: 20px;
+}
+
+.tile-img
+{
+    display: block;
+    padding-bottom: 20px;
+    width: 100px;
+    height: 100px;
+}

@@ -1,15 +1,15 @@
-let express = require("express");
-let app = express();
+const express = require("express");
+const app = express();
 
-const router = require(".routes.routes.js");
+const router = require('./routes/routes.js')
 
 app.use(express.urlencoded({extended:false}));
 
-app.set("views-engine", "ejs")
-app.set("views", "views")
+app.set("view engine", "ejs");
+app.set("views", "views");
 
 app.use(router);
 
-app.listen(3000, '172.225.195.65', function() {
-    console.log('Listening to port:  ' + 3000);
+app.listen(8020, function() {
+    console.log("Server lauscht auf http://localhost:8020");
 });

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+        <title>Sightseeing Categories</title>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="css/styles.css">
+        <link rel="stylesheet" type="text/css" href="css/flexbox.css">
+        <script src="js/burgermenu.js"></script>
+    </head>
+    <body>
+        <%- include("includes/header.ejs") %>
+        <%- include("includes/nav.ejs") %>
+        <div id="containermainaside">
+            <main id="containermain">
+                <% if(Sightseeing)
+                    <section id="img">
+                        <figure>
+                            <img src=<%= places.bild.url %> alt=<%= Sightseeing.picture.name %> height="100" width="100">
+                            <figcaption>
+                                <%= Sightseeing.picture.name %>
+                            </figcaption>
+                        </figure>
+                    </section>
+                    <section id="informations">
+                        <h2><%= Sightseeing.name %></h2>
+                        <p>date: <%= Sightseeing.date %></p>
+                        <p>duration: <%= getDauerInStundenUndMinuten(Sightseeing.duration) %></p>
+                        <p>
+                            description: <%= Sightseeing.description %>
+                        </p>
+                    </section>    
+                    <section id="table">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th><strong>weather</strong></th>
+                                    <th><strong>description</strong></th>
+                                    <th><strong>duration</strong></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <% for (let place of Sightseeing.placeslist) { %>
+                                    <tr>
+                                        <td><%= place.name %></td>
+                                        <td><%= place.description %></td>
+                                        <td><%= getDauerInStundenUndMinuten(place.duration) %></td>
+                                    </tr>
+                                <% } %>    
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <th></th>
+                                    <th></th>
+                                    <td><%= getDauerInStundenUndMinuten(Sightseeing.duration) %></td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </section>
+                <% } %>
+            <% } else { %>
+            <p>no good Sightseeing found</p>
+            <% } %>   
+            </main>
+            <%- include("includes/aside.ejs") %>
+        </div>
+        <%- include("includes/footer.ejs") %>
+    </body>
+</html>

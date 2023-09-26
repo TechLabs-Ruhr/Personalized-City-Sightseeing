@@ -1,0 +1,62 @@
+@media screen and (min-width: 480px)
+{
+    #containerbody
+    {
+        display: grid;
+        grid-template-areas: 
+        "header header"
+        "nav nav"
+        "main aside"
+        "footer footer";
+        grid-template-rows: auto auto auto auto;
+        grid-template-columns: 70% 30%;
+    }
+
+    #containerheader
+    {
+        display: grid;
+        grid-area: header;
+        grid-template-columns: auto auto;
+        justify-content: center;
+        align-items: center;
+        gap: 0;
+    }
+
+    #containernav
+    {
+        display: grid;
+        grid-area: nav;
+        grid-auto-flow: column;
+        justify-content: center;
+        align-items: center;
+        gap: 0;
+    }
+
+    #containermain
+    {
+        display: grid;
+        grid-area: main;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        grid-template-rows: auto 1fr;
+        justify-content: center;
+        align-content: start;
+        align-items: start;
+        gap: 0;
+    }
+
+    #containeraside
+    {
+        display: grid;
+        grid-area: aside;
+        grid-template-rows: 50px 1fr;
+        gap: 0;
+    }
+
+    #containerfooter
+    {
+        display: grid;
+        grid-area: footer;
+        position: fixed;
+        bottom: 0;
+    }
+}
