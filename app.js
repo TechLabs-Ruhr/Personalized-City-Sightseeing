@@ -13,3 +13,7 @@ app.use(router);
 app.listen(8020, function() {
     console.log("Server lauscht auf http://localhost:8020");
 });
+
+const ejs = require('ejs');
+app.engine('html', ejs.renderFile);
+app.set('view engine', 'html');
