@@ -10,19 +10,19 @@
         <script src="js/burgermenu.js"></script>
     </head>
     <body id="containerbody">
-        <%- include("includes/header.ejs") %>
-        <%- include("includes/nav.ejs") %>
+        {% include 'includes/header.html' %}
+        {% include 'includes/nav.html' %}
         <main id="containermain">
             <section id="tutorial1">
                 <h2>Your Recommendations</h2>
-                <% if(Sightseeing) { %>
-                    <p><%= Sightseeing %></p> <!-- Hier wird der von GPT.py erhaltenene Text eingefügt -->
-                <% } else { %>
+                {% if Sightseeing %}
+                    <p>{{ Sightseeing }}</p> <!-- Hier wird der von GPT.py erhaltenene Text eingefügt -->
+                {% else %}
                     <p class="notfound">No matching places</p>
-                <% } %>
+                {% endif %}
             </section>
         </main>
-        <%- include("includes/aside.ejs") %>
-        <%- include("includes/footer.ejs") %>
+        {% include 'includes/aside.html' %}
+        {% include 'includes/footer.html' %}
     </body>
 </html>

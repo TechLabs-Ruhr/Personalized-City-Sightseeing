@@ -1,7 +1,9 @@
 from flask import Flask, render_template
 import openai
+from jinja2 import Environment, FileSystemLoader
 
 app = Flask(__name__, template_folder='views')
+app.jinja_env = Environment(loader=FileSystemLoader('views'))
 
 @app.route('/')
 def index():
@@ -24,7 +26,8 @@ def index():
     recommendation = response['choices'][0]['message']['content']
     
     # Render the ejs template and pass the recommendation to it.
-    return render_template('SightseeingSpots.ejs', Sightseeing=recommendation)
+    return render_template('SightseeingSpots.html', Sightseeing=recommendation)
+
 
 if __name__ == '__main__':
     app.run(debug=True)
