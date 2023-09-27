@@ -14,17 +14,9 @@
         <%- include("includes/nav.ejs") %>
         <main id="containermain">
             <section id="tutorial1">
-                <h2><%= Sightseeing || "All Places" %></h2>
-                <% if(Sightseeing.length) { %>
-                    <% for (let places of Sightseeing) { %>
-                            <figure>
-                                <img src=<%= places.Picture %> alt=<%= Sightseeing.Picture %> height="100">
-                            </figure>
-                            <h3>><%= Sightseeing.name %></a></h3>
-                            <p>date: <%= Sightseeing.date %></p>
-                            <p>duration: <%= (Sightseeing.duration) %></p>
-                            <p>description: <%= Sightseeing.description %></p>
-                    <% } %>
+                <h2>Your Recommendations</h2>
+                <% if(Sightseeing) { %>
+                    <p><%= Sightseeing %></p> <!-- Hier wird der von GPT.py erhaltenene Text eingefügt -->
                 <% } else { %>
                     <p class="notfound">No matching places</p>
                 <% } %>
