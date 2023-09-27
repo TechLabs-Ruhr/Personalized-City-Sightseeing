@@ -30,25 +30,6 @@ router.get("/CreateRecommendation", function (req, res) {
   res.render("CreateRecommendation");
 });
 
-router.post("/CreateRecommendation", function (req, res) {
- 
-  let places = req.body.places.split(',');
-  for(let place of places) {
-    let oldkat = persistence.PlacesArray.find(k => k.name == description);
-    if (oldkat) {
-      tutorial.fuegeOrtHinzu(oldkat);
-    } else {
-      let newkat = new persistence.Place(place, new persistence.picture( `https://img.icons8.com/${place.split(' ')[0].toLowerCase()}`, place));
-      tutorial.fuegeOrtHinzu(newkat);
-      persistence.PlacesArray.push(newkat);
-    }
-  }
-  persistence.SightseeingArray.push(persistence.Place);
-  console.log(persistence.Place);
-  console.log(persistence.PlacesArray);
-  res.redirect('http://localhost:8020/');
-});
-
 router.use(function (req, res) {
   res.status(404).render("error");
   

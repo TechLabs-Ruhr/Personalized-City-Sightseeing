@@ -27,8 +27,6 @@
             <form action="http://localhost:8020/CreateRecommendation" method="post" enctype="multipart/form-data">
                 <fieldset>
                     <legend>Recommendation informations</legend>
-                    <label for="description">Add your favourites</label>
-                    <textarea id="description" name="description" cols="30" rows="10" minlength="40" maxlength="1000" placeholder="What would you like to do?"></textarea>
                     <label for="antwort1">1. What are your interests or hobbies that you would like to incorporate into your vacation? (e.g., nature, art, music, sports)</label>
                     <textarea name="antwort1" id="antwort1" rows="4"></textarea>
                     <label for="antwort2">2. Do you prefer active holidays (such as hiking, cycling, skiing etc.) or more relaxing holidays (e.g., at the beach, wellness experiences)?</label>
@@ -54,19 +52,28 @@
                         <option value="es">Spanish</option>
                         <option value="fr">French</option>
                     </select><span></span><br><br>
-                </fieldset>
-                <fieldset>
-                    <legend>Time for travel</legend>
-                        <label for="date">Startdate</label>
-                        <input id="date" name="date" type="date" size="20" required><span></span><br><br>
-                        <label for="date">Enddate</label>
-                        <input id="date" name="date" type="date" size="20" required><span></span><br><br>
-                        <label for="submit">Create Recommendation</label>
-                        <input id="submit" value="Let´s go!" type="submit">
+                    <label for="submit">Create Recommendation</label>
+                    <input id="submit" value="Let´s go!" type="submit">
                 </fieldset>
             </form>
         </main>
         <%- include("includes/aside.ejs") %>
-        <%- include("includes/footer.ejs") %>
+        <!-- <%- include("includes/footer.ejs") %> -->
     </body>
+    <script>
+        document.getElementById('submit').addEventListener('click', onButtonClick);
+        function onButtonClick() {
+            const antwort1 = document.getElementById('antwort1').value;
+            const antwort2 = document.getElementById('antwort2').value;
+            const antwort3 = document.getElementById('antwort3').value;
+            const antwort4 = document.getElementById('antwort4').value;
+            const antwort5 = document.getElementById('antwort5').value;
+            const antwort6 = document.getElementById('antwort6').value;
+            const antwort7 = document.getElementById('antwort7').value;
+            const antwort8 = document.getElementById('antwort8').value;
+            const antwort9 = document.getElementById('antwort9').value;
+            const antwort = '1. ' + antwort1 + ' 2. ' + antwort2 + ' 3. ' + antwort3 + ' 4. ' + antwort4 + ' 5. ' + antwort5 + ' 6. ' + antwort6 + ' 7. ' + antwort7 + ' 8. ' + antwort8 + ' 9. ' + antwort9;
+            alert(antwort);
+        }
+    </script> 
 </html>
