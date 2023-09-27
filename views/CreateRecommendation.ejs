@@ -10,6 +10,14 @@
         <link rel="stylesheet" type="text/css" href="css/grid.css">
         <script src="js/form.js"></script>
         <script src="js/burgermenu.js"></script>
+        <style>
+            textarea {
+                width: calc(100% - 20px);
+                padding: 10px;
+                margin-bottom: 20px;
+                resize: vertical;
+            }
+        </style>
     </head>
     <body id="containerbody">
         <%- include("includes/header.ejs") %>
@@ -19,19 +27,33 @@
             <form action="http://localhost:8020/CreateRecommendation" method="post" enctype="multipart/form-data">
                 <fieldset>
                     <legend>Recommendation informations</legend>
-                        <label for="titel">Place:</label>
-                        <input id="titel" name="name" type="text" size="20" minlength="4" maxlength="20" pattern="[A-Z][a-z]*$" placeholder="Name of the place" autofocus required><span></span><br><br>
-                        <label for="language">language:</label>
-                        <select id="language" name="language" required size="4">
-                            <option value="de">German</option>
-                            <option value="en">English</option>
-                            <option value="es">Spanish</option>
-                            <option value="fr">French</option>
-                        </select><span></span><br><br>
-                        <label for="categories">Weather</label>
-                        <input id="categories" name="categories" type="text" size="20" maxlength="20" pattern="^[a-zA-Z]+(,[a-zA-Z]+)*$" placeholder="your preferences" required><span></span><br><br>
-                        <label for="description">Add your favourites</label>
-                        <textarea id="description" name="description" cols="30" rows="10" minlength="40" maxlength="1000" placeholder="What would you like to do?"></textarea><br><br>
+                    <label for="description">Add your favourites</label>
+                    <textarea id="description" name="description" cols="30" rows="10" minlength="40" maxlength="1000" placeholder="What would you like to do?"></textarea>
+                    <label for="antwort1">1. What are your interests or hobbies that you would like to incorporate into your vacation? (e.g., nature, art, music, sports)</label>
+                    <textarea name="antwort1" id="antwort1" rows="4"></textarea>
+                    <label for="antwort2">2. Do you prefer active holidays (such as hiking, cycling, skiing etc.) or more relaxing holidays (e.g., at the beach, wellness experiences)?</label>
+                    <textarea name="antwort2" id="antwort2" rows="4"></textarea>
+                    <label for="antwort3">3. Do you have a preference for the climate or weather at your vacation destination? (e.g., warm, cold, dry, humid)</label>
+                    <textarea name="antwort3" id="antwort3" rows="4"></textarea>
+                    <label for="antwort4">4. Are there any specific regions or countries you are interested in, or would like to avoid?</label>
+                    <textarea name="antwort4" id="antwort4" rows="4"></textarea>
+                    <label for="antwort5">5. Would you prefer an urban, suburban, or rural setting for your vacation destination?</label>
+                    <textarea name="antwort5" id="antwort5" rows="4"></textarea>
+                    <label for="antwort6">6. What activities do you enjoy? (e.g., hiking, museums, surfing)</label>
+                    <textarea name="antwort6" id="antwort6" rows="4"></textarea>
+                    <label for="antwort7">7. Are you looking for adventurous experiences like bungee jumping or skydiving?</label>
+                    <textarea name="antwort7" id="antwort7" rows="4"></textarea>
+                    <label for="antwort8">8. When do you plan to go on vacation, and how flexible are your dates?</label>
+                    <textarea name="antwort8" id="antwort8" rows="4"></textarea>
+                    <label for="antwort9">9. Will you be traveling alone, or will others be joining you? If others are joining, how many people, and what are their preferences and interests?</label>
+                    <textarea name="antwort9" id="antwort9" rows="4"></textarea>
+                    <label for="language">In which language do you like your answer?</label>
+                    <select id="language" name="language" required size="4">
+                        <option value="de">German</option>
+                        <option value="en">English</option>
+                        <option value="es">Spanish</option>
+                        <option value="fr">French</option>
+                    </select><span></span><br><br>
                 </fieldset>
                 <fieldset>
                     <legend>Time for travel</legend>
@@ -39,9 +61,9 @@
                         <input id="date" name="date" type="date" size="20" required><span></span><br><br>
                         <label for="date">Enddate</label>
                         <input id="date" name="date" type="date" size="20" required><span></span><br><br>
+                        <label for="submit">Create Recommendation</label>
+                        <input id="submit" value="Let´s go!" type="submit">
                 </fieldset>
-                <label for="submit">Create Recommendation</label>
-                <input id="submit" value="Let´s go!" type="submit">
             </form>
         </main>
         <%- include("includes/aside.ejs") %>
