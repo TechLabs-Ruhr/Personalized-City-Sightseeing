@@ -14,7 +14,11 @@ In order to setup the project, please proceed as follows:
 After successful installation use the following command to run the project:
 
 ```bash
-  npm run
+  npm install
+```
+
+```bash
+  node app.js
 ```
 ## Examples
 
