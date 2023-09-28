@@ -57,7 +57,7 @@ h3
 p
 {
     color: black;
-    background-color: #b7ce63;
+    background-color: #F3CE2F;
     font-size: large;
     font-weight: bolder;
     border: 2px solid black;
@@ -80,7 +80,7 @@ body
 
 header
 {
-    background-color: #daddd8;
+    background-color: white;
     text-align: center;
     border: 2px solid black;
     border-radius: 10px; 
@@ -115,7 +115,7 @@ nav a:hover
 }
 
 main {
-    background-color: #6b6d76;
+    background-color: #F3EA93;
     border: 1px solid black;
     border-radius: 10px;
     padding: 5px;
@@ -142,7 +142,7 @@ main#tutorials img
 thead
 {
     color: black;
-    background-color: #b7ce63;
+    background-color: #F3CE2F;
 }
 
 tbody tr:nth-of-type(odd)
@@ -160,7 +160,7 @@ tbody tr:nth-of-type(even)
 tfoot
 {
     color: black;
-    background-color: #b7ce63;
+    background-color: #F3CE2F;
 }
 
 aside > h2
@@ -178,7 +178,7 @@ aside > h2
 aside
 {
     color: black;
-    background-color: #b7ce63;
+    background-color: #F3CE2F;
     border: 2px solid black;
     border-radius: 10px; 
     font-size: large;
