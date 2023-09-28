@@ -1,14 +1,14 @@
-# Personalized City Sightseeing Recommendation App
+# ExploreAssist - Personalized City Sightseeing
 
-Description: Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
+Our innovative app aims to redefine travel planning through AI-driven personalized city sightseeing recommendations. By leveraging cutting-edge technologies and data from diverse sources, we create tailored travel experiences, minimizing the hassle and maximizing the joy of exploring unknown cities. Users input their preferences, and our app, backed by CHATGPT 3.5, provides intelligent, personalized suggestions for cities and sites to explore, fundamentally reshaping how we experience new places.
 
 
 ## How to Setup and Run
 
-In order to setup the project, please proceed as follows:
+To setup the project, please proceed as follows:
 
 ```bash
-  npm install my-project
+  npm install Personalized-City-Sightseeing
 ```
 
 After successful installation use the following command to run the project:
@@ -16,29 +16,15 @@ After successful installation use the following command to run the project:
 ```bash
   node app.js
 ```
-## Examples
 
-You can see a brief overview of how to use the main functionality below
+To get a first look at how the recommendation will look like:
 
-```javascript
-import Component from 'my-project'
-
-function App() {
-  return <Component />
-}
+```bash
+  cd C:\...\Personalized-City-Sightseeing\models
 ```
 
-  
-## Roadmap
+```bash
+  python GPT.py
+```
 
-- Additional browser support
-- Add more integrations
-
-  
-## Authors
-
-- [@bob](https://www.github.com/bob)
-- [@alice](https://www.github.com/alice)
-
-  
-
+Then wait for the recommendation to appear
